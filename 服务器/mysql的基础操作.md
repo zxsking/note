@@ -113,3 +113,13 @@ update [表名] set [字段名] = [字段类容] where [匹配字段];
 update pet set owner = 'kevin' where name = 'Claws';
 ```
 
+
+
+## 4.其他功能
+
+### 查询字符集
+
+```
+SHOW VARIABLES LIKE 'character%';
+```
+

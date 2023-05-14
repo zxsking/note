@@ -70,9 +70,11 @@ git push -u origin main
 
 
 
+## 提交代码时会因检查文件换行符报错，为避免报错可执行以下代码
 
-
-
+```
+git config --global core.autocrlf true
+```
 
 
 
