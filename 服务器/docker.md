@@ -56,9 +56,15 @@ sudo docker run -p 3306:3306 --name mysql \
 -v /mydata/mysql/conf:/etc/mysql \
 -e MYSQL_ROOT_PASSWORD=root \
 -d mysql:5.7
+
+#windows
+docker run -p 3306:3306 --privileged=true  --name mysql -v  /d/dev/docker/mydata/mysql/log:/var/log/mysql -v /d/dev/docker/mydata/mysql/data:/var/lib/mysql -v /d/dev/docker/mydata/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD="root"  -d mysql:5.7
+
+
+
 	
 #ubuntu	
-sudo docker run --name mysql-container -v /mydata/mysql/conf:/etc/mysql/conf.  d -v /mydata/mysql/data:/var/lib/mysql -v /mydata/mysql/logs:/var/log/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7	
+sudo docker run --name mysql-container -v /mydata/mysql/conf:/etc/mysql/conf.d -v /mydata/mysql/data:/var/lib/mysql -v /mydata/mysql/logs:/var/log/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7	
 
 ubuntu配置my.cnf
 	
